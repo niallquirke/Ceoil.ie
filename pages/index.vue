@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div>
+    <div class="inner_container">
       <div class="form">
         <h1 class="form_option">Discover</h1>
         <select name="Genre" id="genre">
@@ -15,7 +15,7 @@
         <iframe
           src="https://open.spotify.com/embed/playlist/2jRcgzF55Zfcj7UDZMi7cm"
           width="300"
-          height="380"
+          height="300"
           frameborder="0"
           allowtransparency="true"
           allow="encrypted-media"
@@ -26,8 +26,6 @@
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-
 export default {
   data() {
     return {
@@ -41,6 +39,7 @@ export default {
         'Trad Music'
       ],
       counties: [
+        'Ireland',
         'Antrim',
         'Armagh',
         'Carlow',
@@ -85,6 +84,7 @@ html {
 }
 
 .container {
+  width: 100%;
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -93,8 +93,12 @@ html {
   text-align: center;
 }
 
+.inner_container {
+  margin: 0 auto;
+}
+
 .form {
-  margin: 50px;
+  margin-bottom: 30px;
 }
 
 .form_option {
@@ -102,24 +106,26 @@ html {
 }
 
 .playlist {
-  margin: 50px;
+  margin-top: 30px;
 }
 
 select {
-  width: 100%;
+  width: 95%;
   height: 52px;
   padding: 0 24px 0 10px;
   vertical-align: middle;
-  background: #fff
+  background: #39b982
     url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")
     no-repeat right 12px center;
   background-size: 8px 10px;
-  border: solid 1px rgba(0, 0, 0, 0.4);
+  border: solid 0px rgba(128, 74, 74, 0.4);
   border-radius: 10px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  text-decoration: underline;
+  text-align-last: center;
 }
 
 select:focus {
